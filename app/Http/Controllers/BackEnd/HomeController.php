@@ -3,8 +3,6 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 
-
-
 class HomeController extends Controller
 {
     /**
@@ -24,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('back-end.home');
+        return view('front-end.home');
     }
 
     public function about()
@@ -41,6 +39,5 @@ class HomeController extends Controller
     {
 
     }
-
 
 }
