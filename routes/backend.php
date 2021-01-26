@@ -1,7 +1,8 @@
 <?php
 use Illuminate\Support\Facades\Route;
 // ABOUT
-Route::get('about', 'HomeController@about')->name('about');
+Route::get('company/data', 'CompanyController@company')->name('company.data');
+Route::post('/company/data/update','CompanyController@update')->name('update.company.data');
 
 // SOLUTIONS
 Route::get('solutions', 'HomeController@solutions')->name('solutions');

@@ -44,7 +44,7 @@
                         <span>Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('about')}}">About</a></li>
+                        <li><a href="{{route('company.data')}}">About</a></li>
                         <li><a href="{{route('solutions')}}">Solutions</a></li>
                         <li><a href="{{route('contact')}}">Contact</a></li>
                     </ul>

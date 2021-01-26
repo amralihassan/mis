@@ -108,12 +108,9 @@
             <div class="section-title row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500'>About</h3>
-                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='1600' class="lead">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Voluptatibus animi assumenda eius! Quo delectus eveniet
-                        numquam ad reiciendis error laudantium quos omnis aperiam quam aspernatur vitae vel, debitis rem
-                        fuga atque sit harum culpa voluptates eos itaque veniam odit dicta. Reiciendis illum nulla veniam
-                        maxime accusamus quaerat eligendi totam facilis excepturi, nostrum asperiores. Sunt, dolore dolor ex
-                        modi odit architecto!</p>
+                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='1600' class="lead">
+                        {{ $company->about }}
+                    </p>
                 </div>
             </div><!-- end title -->
             <hr class="hr3">
@@ -121,12 +118,9 @@
             <div class="section-title row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500' data-aos-delay='3200'>Mission</h3>
-                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='4700' class="lead">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Voluptatibus animi assumenda eius! Quo delectus eveniet
-                        numquam ad reiciendis error laudantium quos omnis aperiam quam aspernatur vitae vel, debitis rem
-                        fuga atque sit harum culpa voluptates eos itaque veniam odit dicta. Reiciendis illum nulla veniam
-                        maxime accusamus quaerat eligendi totam facilis excepturi, nostrum asperiores. Sunt, dolore dolor ex
-                        modi odit architecto!</p>
+                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='4700' class="lead">
+                        {{ $company->mission }}
+                    </p>
                 </div>
             </div><!-- end title -->
             <hr class="hr3">
@@ -134,12 +128,8 @@
             <div class="section-title row text-center">
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500' data-aos-delay='6300'>Vision</h3>
-                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='7900' class="lead">Lorem ipsum dolor
-                        sit amet consectetur adipisicing elit. Voluptatibus animi assumenda eius! Quo delectus eveniet
-                        numquam ad reiciendis error laudantium quos omnis aperiam quam aspernatur vitae vel, debitis rem
-                        fuga atque sit harum culpa voluptates eos itaque veniam odit dicta. Reiciendis illum nulla veniam
-                        maxime accusamus quaerat eligendi totam facilis excepturi, nostrum asperiores. Sunt, dolore dolor ex
-                        modi odit architecto!</p>
+                    <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='7900' class="lead">
+                        {{ $company->vision }}</p>
                 </div>
             </div><!-- end title -->
             <hr class="hr3">
@@ -152,21 +142,21 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
                             class="flaticon-hosting"></i></span>
-                    <p class="stat_count">400</p>
+                    <p class="stat_count">{{ $company->customers }}</p>
                     <h3>Customers</h3>
                 </div><!-- end col -->
 
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
                             class="flaticon-domain-registration"></i></span>
-                    <p class="stat_count">600</p>
+                    <p class="stat_count">{{ $company->projects }}</p>
                     <h3>Projects</h3>
                 </div><!-- end col -->
 
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <span data-scroll class="global-radius icon_wrap effect-1 alignleft"><i
                             class="flaticon-mail"></i></span>
-                    <p class="stat_count">500</p>
+                    <p class="stat_count">{{ $company->partners }}</p>
                     <h3>Partners</h3>
                 </div><!-- end col -->
             </div><!-- end row -->
