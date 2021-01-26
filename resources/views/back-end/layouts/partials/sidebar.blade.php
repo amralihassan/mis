@@ -10,10 +10,17 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="{{route('home')}}" class="waves-effect">
+                    <a href="{{route('dashboard')}}" class="waves-effect">
                         <i class="fa fa-home"></i><span> Dashboard</span>
                     </a>
                 </li>
+
+                <li>
+                    <a target="_blank" href="{{settings()->website}}" class="waves-effect">
+                        <i class="fas fa-globe-africa"></i><span> Website</span>
+                    </a>
+                </li>
+
                 @if (authInfo()->isAbleTo('view-users'))
                 <li>
                     <a href="{{route('users.index')}}" class="waves-effect">
@@ -33,7 +40,7 @@
                 @if (authInfo()->isAbleTo('view-settings'))
                 <li>
                     <a href="{{route('settings')}}" class="waves-effect">
-                        <i class="fas fa-cog"></i><span> Settings</span>
+                        <i class="fas fa-cogs"></i><span> Settings</span>
                     </a>
                 </li>
                 @endif

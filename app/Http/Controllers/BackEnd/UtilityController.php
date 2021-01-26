@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Controllers\BackEnd;
 
-use App\Models\Operations\UserOp;
-use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
-use App\Models\Operations\SettingOp;
 use App\Http\Requests\SettingRequest;
+use App\Http\Requests\UserRequest;
+use App\Models\Operations\SettingOp;
+use App\Models\Operations\UserOp;
 
 class UtilityController extends Controller
 {
@@ -38,5 +38,11 @@ class UtilityController extends Controller
         SettingOp::updateSetting($request);
         toastr()->success('Settings updated successfully');
         return redirect()->back();
+    }
+
+    public function logout()
+    {
+        auth()->guard('web')->logout();
+        return redirect()->route('home');
     }
 }

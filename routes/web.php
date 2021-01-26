@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -18,10 +17,11 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackEnd'], function () {
-    // Route::get('/home', 'HomeController@index')->name('home');
-    // LOGOUT
-    Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+    Route::redirect('/','admin/dashboard');
+    Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
+    // LOGOUT
+    Route::get('logout', 'UtilityController@logout')->name('logout');
     // USERS
     Route::resource('users', 'UserController')->except('show');
 
@@ -40,8 +40,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackE
 
     // SETTING
     Route::get('/settings', 'UtilityController@settings')->name('settings');
-    Route::post('/general-settings','UtilityController@updateSettings')->name('update.settings');
-
+    Route::post('/general-settings', 'UtilityController@updateSettings')->name('update.settings');
 
     // WEBSITE
     require 'backend.php';

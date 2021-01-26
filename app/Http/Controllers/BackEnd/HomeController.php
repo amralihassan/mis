@@ -22,7 +22,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front-end.home');
+        return view('back-end.home');
     }
 
     public function about()
@@ -39,5 +39,7 @@ class HomeController extends Controller
     {
 
     }
+
+
 
 }
