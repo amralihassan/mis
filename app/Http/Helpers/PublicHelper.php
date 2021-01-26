@@ -16,3 +16,11 @@ if (!function_exists('authInfo')) {
         }
     }
 }
+
+// general settings
+if (!function_exists('settings')) {
+    function settings()
+    {
+        return \App\Models\Setting::orderBy('id', 'desc')->first();
+    }
+}

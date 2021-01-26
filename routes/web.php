@@ -3,10 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login');
@@ -22,7 +18,7 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackEnd'], function () {
-    Route::get('/', 'HomeController@index')->name('home');
+    // Route::get('/home', 'HomeController@index')->name('home');
     // LOGOUT
     Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
@@ -41,6 +37,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackE
 
     // ATTACH PERMISSION TO ROLE
     Route::post('/add-permissions', 'RoleController@addPermission')->name('add.permission');
+
+    // SETTING
+    Route::get('/settings', 'UtilityController@settings')->name('settings');
+    Route::post('/general-settings','UtilityController@updateSettings')->name('update.settings');
+
 
     // WEBSITE
     require 'backend.php';

@@ -1,4 +1,4 @@
-@csrf
+
 @if($errors->any())
     @foreach($errors->all() as $error)
         <!-- print all errors -->

@@ -5,10 +5,10 @@
                 <div class="widget clearfix">
                     <div class="widget-title">
                         <img src="{{asset('site/images/logos/logo-hosting-light.png')}}" alt="">
-                        <small>Web Hosting Template</small>
+                        <small>{{settings()->website_name}}</small>
                     </div>
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
-                    <p>Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis montes.</p>
+                    <p> {{settings()->description}}</p>
+
                 </div><!-- end clearfix -->
             </div><!-- end col -->
 
@@ -19,10 +19,8 @@
                     </div>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Projects</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul><!-- end links -->
                 </div><!-- end clearfix -->
@@ -35,10 +33,10 @@
                     </div>
 
                     <ul class="footer-links">
-                        <li><a href="mailto:#">info@yoursite.com</a></li>
-                        <li><a href="#">www.yoursite.com</a></li>
-                        <li>PO Box 16122 Collins Street West Victoria 8007 Australia</li>
-                        <li>+61 3 8376 6284</li>
+                        <li><a href="mailto:#">{{settings()->email}}</a></li>
+                        <li><a href="#">{{settings()->website}}</a></li>
+                        <li>{{settings()->address}}</li>
+                        <li>{{settings()->contact}}</li>
                     </ul><!-- end links -->
                 </div><!-- end clearfix -->
             </div><!-- end col -->
@@ -49,11 +47,8 @@
                         <h3>Social</h3>
                     </div>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fa fa-facebook"></i> 22.543 Likes</a></li>
-                        <li><a href="#"><i class="fa fa-github"></i> 128 Projects</a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i> 12.860 Followers</a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i> 3312 Shots</a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i>3331 Pins</a></li>
+                        <li><a href="{{settings()->facebook}}"><i class="fa fa-facebook"></i> Facebook</a></li>
+                        <li><a href="{{settings()->youtube}}"><i class="fa fa-youtube"></i> Youtube</a></li>
                     </ul><!-- end links -->
                 </div><!-- end clearfix -->
             </div><!-- end col -->

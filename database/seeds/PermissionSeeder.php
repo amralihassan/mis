@@ -26,11 +26,13 @@ class PermissionSeeder extends Seeder
         $permissions[] = Permission::create(['name' => 'edit-user', 'display_name' => 'Edit User', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-user', 'display_name' => 'Delete User', 'description' => '']);
 
-        $permissions[] = Permission::create(['name' => 'view-roles', 'display_name' => 'Update Setting', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'add-role', 'display_name' => 'Update Setting', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'edit-role', 'display_name' => 'Update Setting', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'delete-role', 'display_name' => 'Update Setting', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'view-roles', 'display_name' => 'Update Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'add-role', 'display_name' => 'Update Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-role', 'display_name' => 'Update Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-role', 'display_name' => 'Update Role', 'description' => '']);
 
+        $permissions[] = Permission::create(['name' => 'view-settings', 'display_name' => 'View Settings', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'update-settings', 'display_name' => 'Update Settings', 'description' => '']);
         $owner->attachPermissions($permissions);
     }
 }

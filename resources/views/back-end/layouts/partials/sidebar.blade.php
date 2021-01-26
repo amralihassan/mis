@@ -30,6 +30,14 @@
                 </li>
                 @endif
 
+                @if (authInfo()->isAbleTo('view-settings'))
+                <li>
+                    <a href="{{route('settings')}}" class="waves-effect">
+                        <i class="fas fa-cog"></i><span> Settings</span>
+                    </a>
+                </li>
+                @endif
+
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-profile-line"></i>

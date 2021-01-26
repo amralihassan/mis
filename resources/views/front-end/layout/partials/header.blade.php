@@ -9,10 +9,10 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
      <!-- Site Metas -->
-    <title>HostCloud - Responsive HTML5 Template</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>{{settings()->website_name}}</title>
+    <meta name="keywords" content="{{settings()->keywords}}">
+    <meta name="description" content="{{settings()->description}}">
+    <meta name="author" content="{{settings()->author}}">
 
         <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
