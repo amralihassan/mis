@@ -206,7 +206,7 @@
         </tr>
 
         <tr>
-            <td>Solutions</td>
+            <td>Contacts</td>
             <td>
                 <div class="custom-control custom-checkbox mb-3">
                     <input type="checkbox" class="custom-control-input" id="customCheck21"
