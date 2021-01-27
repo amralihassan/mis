@@ -17,7 +17,7 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackEnd'], function () {
-    Route::redirect('/','admin/dashboard');
+    Route::redirect('/', 'admin/dashboard');
     Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
     // LOGOUT

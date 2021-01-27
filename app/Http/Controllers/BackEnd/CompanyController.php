@@ -7,6 +7,12 @@ use App\Models\Operations\CompanyOp;
 
 class CompanyController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:view-company', ['only' => ['company']]);
+        $this->middleware('permission:edit-company', ['only' => ['update']]);
+    }
+
     public function company()
     {
         $company = CompanyOp::data();

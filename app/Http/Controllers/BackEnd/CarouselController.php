@@ -12,10 +12,10 @@ class CarouselController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('permission:view-users', ['only' => ['index', 'show']]);
-        $this->middleware('permission:add-user', ['only' => ['create', 'store']]);
-        $this->middleware('permission:edit-user', ['only' => ['edit', 'update', 'addPermission']]);
-        $this->middleware('permission:delete-user', ['only' => ['destroy']]);
+        $this->middleware('permission:view-carousels', ['only' => ['index']]);
+        $this->middleware('permission:add-carousel', ['only' => ['create', 'store']]);
+        $this->middleware('permission:edit-carousel', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:delete-carousel', ['only' => ['destroy']]);
     }
     /**
      * Display a listing of the resource.

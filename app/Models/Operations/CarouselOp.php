@@ -20,7 +20,7 @@ class CarouselOp extends Carousel
     public static function _store($request)
     {
 
-        $carousel = auth()->user()->carousels()->create($request->only(['title', 'paragraph']));
+        $carousel = $request->user()->carousels()->create($request->only(['title', 'paragraph']));
         self::uploadImage($request, $carousel);
         return true;
 

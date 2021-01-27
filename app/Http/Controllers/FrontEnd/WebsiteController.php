@@ -5,6 +5,7 @@ namespace App\Http\Controllers\FrontEnd;
 use App\Http\Controllers\Controller;
 use App\Models\Operations\CarouselOp;
 use App\Models\Operations\CompanyOp;
+use App\Models\Operations\SolutionOp;
 
 class WebsiteController extends Controller
 {
@@ -17,7 +18,15 @@ class WebsiteController extends Controller
 
     public function solutions()
     {
-        return view('front-end.solutions');
+        $softwares = SolutionOp::softwares();
+        $networks = SolutionOp::networks();
+        return view('front-end.solutions', compact('softwares', 'networks'));
+    }
+
+    public function showSolution($id)
+    {
+        $solution = SolutionOp::_fetchById($id);
+        return view('front-end.show-solution', compact('solution'));
     }
 
     public function projects()

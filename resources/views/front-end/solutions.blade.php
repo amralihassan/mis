@@ -27,16 +27,13 @@
                                 </div>
                                 <div class="pricing-table-space"></div>
                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-check"></i><strong>Project Management System (PMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>Client Relation Management (CRM)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>Employee Management System (EMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>Financial Management System (FMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>School Management System (SMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>Learning Management System (LMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>Medical Management System (MMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>GYM Management System (GMS)</strong></p>
-                                    <p><i class="fa fa-check"></i><strong>E-Commerce</strong></p>
-
+                                    @forelse ($softwares as $software)
+                                        <p><i class="fa fa-check"></i><strong>
+                                                <a href="{{route('show.solutions',$software->id)}}">{{ $software->solution_name }} {{ $software->abstract }}</a>
+                                            </strong></p>
+                                    @empty
+                                        <p><i class="fa fa-check"></i><strong>We do not have software solutions</strong></p>
+                                    @endforelse
                                 </div>
                                 <div class="pricing-table-sign-up">
                                     <a href="#contact" data-scroll
@@ -52,7 +49,15 @@
                                 <div class="pricing-table-space"></div>
 
                                 <div class="pricing-table-features">
-                                    <p><i class="fa fa-check"></i><strong>Servers and Storage</strong></p>
+                                    @forelse ($networks as $network)
+                                        <p><i class="fa fa-check"></i><strong>
+                                                <a href="{{route('show.solutions',$network->id)}}">{{ $network->solution_name }} {{ $network->abstract }}</a>
+                                            </strong></p>
+                                    @empty
+                                        <p><i class="fa fa-check"></i><strong>We do not have network solutions.</strong></p>
+                                    @endforelse
+                                    {{-- <p><i class="fa fa-check"></i><strong>Servers and
+                                            Storage</strong></p>
                                     <p><i class="fa fa-check"></i><strong>Network Security</strong></p>
                                     <p><i class="fa fa-check"></i><strong>Wi-Fi Coverage Solutions</strong></p>
                                     <p><i class="fa fa-check"></i><strong>Internet Building System</strong></p>
@@ -65,6 +70,7 @@
                                     <p><i class="fa fa-check"></i><strong>Fire Alarm System</strong></p>
                                     <p><i class="fa fa-check"></i><strong>Queuing System</strong></p>
                                     <p><i class="fa fa-check"></i><strong>Maintenance & Support</strong></p>
+                                    --}}
                                 </div>
                                 <div class="pricing-table-sign-up">
                                     <a href="#contact" data-scroll

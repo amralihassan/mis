@@ -34,10 +34,18 @@ class PermissionSeeder extends Seeder
         $permissions[] = Permission::create(['name' => 'view-settings', 'display_name' => 'View Settings', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'update-settings', 'display_name' => 'Update Settings', 'description' => '']);
 
+        $permissions[] = Permission::create(['name' => 'view-company', 'display_name' => 'View Company', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-company', 'display_name' => 'Update Company', 'description' => '']);
+
         $permissions[] = Permission::create(['name' => 'view-carousels', 'display_name' => 'View Slideshow', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'add-carousel', 'display_name' => 'Add Slideshow', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'edit-carousel', 'display_name' => 'Edit Slideshow', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-carousel', 'display_name' => 'Delete Slideshow', 'description' => '']);
+
+        $permissions[] = Permission::create(['name' => 'view-solutions', 'display_name' => 'View Solution', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'add-solution', 'display_name' => 'Add Solution', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-solution', 'display_name' => 'Edit Solution', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-solution', 'display_name' => 'Delete Solution', 'description' => '']);
 
         $owner->attachPermissions($permissions);
     }

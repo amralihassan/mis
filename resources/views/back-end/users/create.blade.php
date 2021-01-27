@@ -11,7 +11,7 @@
                 <form class="needs-validation" novalidate method="POST" action="{{route('users.store')}}" enctype="multipart/form-data">
 
                     @include('back-end.users._form')
-
+                    @csrf
                     <hr>
                     <button class="btn btn-primary" type="submit">Save</button>
                     <button type="button" class="btn btn-light" onclick="location.href='{{route('users.index')}}';">

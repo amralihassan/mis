@@ -1,4 +1,7 @@
 @extends('back-end.layouts.app')
+@section('style')
+<link href="{{asset('cPanel/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+@endsection
 @section('title', 'Users')
 @section('content')
     @include("back-end.layouts.partials.page-title",
@@ -37,12 +40,12 @@
                                             <a class="btn btn-warning" href="{{ route('users.edit', $user->id) }}"><i
                                                     class="fa fa-edit"></i> Edit</a>
                                         @endif
-                                        
+
                                         @csrf
                                         @method('DELETE')
 
                                         @if (authInfo()->isAbleTo('delete-user'))
-                                            <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
+                                            <button id="sa-warning" type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
                                                 Trash</button>
                                         @endif
                                     </form>
@@ -57,12 +60,7 @@
     </div> <!-- end row -->
 @endsection
 @section('script')
-    <script>
-        $('#deleteForm').submit(function() {
-            confirm("Are you sure you want to delete this user?");
-        })
 
-    </script>
     <!-- apexcharts -->
     <script src="{{ asset('cPanel/assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
@@ -71,6 +69,12 @@
     </script>
     <script src="{{ asset('cPanel/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js') }}">
     </script>
+
+    <!-- Sweet Alerts js -->
+    <script src="{{asset('cPanel/assets/libs/sweetalert2/sweetalert2.min.js')}}"></script>
+
+    <!-- Sweet alert init js-->
+    <script src="{{asset('cPanel/assets/js/pages/sweet-alerts.init.js')}}"></script>
 
     @include("back-end.layouts.partials.dataTable")
 @endsection

@@ -10,39 +10,39 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="{{route('dashboard')}}" class="waves-effect">
+                    <a href="{{ route('dashboard') }}" class="waves-effect">
                         <i class="fa fa-home"></i><span> Dashboard</span>
                     </a>
                 </li>
 
                 <li>
-                    <a target="_blank" href="{{settings()->website}}" class="waves-effect">
+                    <a target="_blank" href="{{ settings()->website }}" class="waves-effect">
                         <i class="fas fa-globe-africa"></i><span> Website</span>
                     </a>
                 </li>
 
                 @if (authInfo()->isAbleTo('view-users'))
-                <li>
-                    <a href="{{route('users.index')}}" class="waves-effect">
-                        <i class="fa fa-users"></i><span> Users</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ route('users.index') }}" class="waves-effect">
+                            <i class="fa fa-users"></i><span> Users</span>
+                        </a>
+                    </li>
                 @endif
 
                 @if (authInfo()->isAbleTo('view-roles'))
-                <li>
-                    <a href="{{route('roles.index')}}" class="waves-effect">
-                        <i class="fa fa-asterisk"></i><span> Roles</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ route('roles.index') }}" class="waves-effect">
+                            <i class="fa fa-asterisk"></i><span> Roles</span>
+                        </a>
+                    </li>
                 @endif
 
                 @if (authInfo()->isAbleTo('view-settings'))
-                <li>
-                    <a href="{{route('settings')}}" class="waves-effect">
-                        <i class="fas fa-cogs"></i><span> Settings</span>
-                    </a>
-                </li>
+                    <li>
+                        <a href="{{ route('settings') }}" class="waves-effect">
+                            <i class="fas fa-cogs"></i><span> Settings</span>
+                        </a>
+                    </li>
                 @endif
 
                 <li>
@@ -51,10 +51,16 @@
                         <span>Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('carousels.index')}}">Slideshow</a></li>
-                        <li><a href="{{route('company.data')}}">About</a></li>
-                        <li><a href="{{route('solutions')}}">Solutions</a></li>
-                        <li><a href="{{route('contact')}}">Contact</a></li>
+                        @if (authInfo()->isAbleTo('view-solutions'))
+                            <li><a href="{{ route('carousels.index') }}">Slideshow</a></li>
+                        @endif
+                        @if (authInfo()->isAbleTo('view-company'))
+                            <li><a href="{{ route('company.data') }}">About</a></li>
+                        @endif
+                        @if (authInfo()->isAbleTo('view-solutions'))
+                            <li><a href="{{ route('solutions.index') }}">Solutions</a></li>
+                        @endif
+                        <li><a href="{{ route('contact') }}">Contact</a></li>
                     </ul>
                 </li>
 

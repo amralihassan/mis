@@ -9,6 +9,12 @@ use App\Models\Operations\UserOp;
 
 class UtilityController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:view-settings', ['only' => ['settings']]);
+        $this->middleware('permission:update-settings', ['only' => ['updateSettings']]);
+    }
+
     public function profile()
     {
         $user = authInfo();

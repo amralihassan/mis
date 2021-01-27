@@ -17,7 +17,24 @@
         <link href="{{asset('cPanel/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
         <!-- App Css-->
         <link href="{{asset('cPanel/assets/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
+        <style>
+            body, html {
+            height: 100%;
+            }
 
+            .bg {
+            /* The image used */
+            background-image: url("storage/web-settings/login2.jpg");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        </style>
     </head>
 
     <body class="auth-body-bg">
@@ -35,7 +52,7 @@
                                         <div>
                                             <div class="text-center">
                                                 <div>
-                                                    <a href="/" class="logo"><img src="{{asset('cPanel/assets/images/logo-dark.png')}}" height="20" alt="logo"></a>
+                                                    <a href="/" class="logo"><img src="{{ asset(settings()->logo_image) }}" height="20" alt="logo"></a>
                                                 </div>
 
                                                 <h4 class="font-size-18 mt-4">Welcome Back !</h4>
@@ -91,11 +108,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="authentication-bg">
-                            <div class="bg-overlay">
-                            </div>
-                        </div>
+                    <div class="col-lg-8 ">
+                        <div class="bg"></div>
                     </div>
                 </div>
             </div>
