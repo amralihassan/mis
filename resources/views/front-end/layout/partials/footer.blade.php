@@ -4,7 +4,7 @@
             <div class="col-md-4 col-sm-4 col-xs-12">
                 <div class="widget clearfix">
                     <div class="widget-title">
-                        <img src="{{asset('site/images/logos/logo-hosting-light.png')}}" alt="">
+                        <img src="{{ asset(settings()->logo_image) }}" alt="">
                         <small>{{settings()->website_name}}</small>
                     </div>
                     <p> {{settings()->description}}</p>

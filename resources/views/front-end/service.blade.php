@@ -2,8 +2,7 @@
 @section('content')
     <div class="all-title-box">
         <div class="container text-center">
-            <h1>Service Name <span class="m_1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error dignissimos
-                    quo nemo eius.</span></h1>
+            <h1>Service Name <span class="m_1"></span></h1>
         </div>
     </div>
 
