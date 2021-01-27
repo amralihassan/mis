@@ -1,14 +1,9 @@
 @extends('back-end.layouts.app')
 
-@section('title', 'Users')
+@section('title', 'Contacts')
 @section('content')
     @include("back-end.layouts.partials.page-title",
-    ['pagetitle'=>'Dashoard','title'=>'Users'])
-    @if (authInfo()->isAbleTo('add-user'))
-        <div class="mb-2">
-            <a class="btn btn-success" href="{{ route('users.create') }}"><i class="fa fa-plus"></i> New User</a>
-        </div>
-    @endif
+    ['pagetitle'=>'Dashoard','title'=>'Contacts'])
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -18,31 +13,30 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Image</th>
-                                <th>Name</th>
+                                <th>Full Name</th>
+                                <th>Mobile</th>
                                 <th>Email</th>
+                                <th>Solution</th>
+                                <th>Notes</th>
                                 <th>Created At</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        @foreach ($users as $index => $user)
+                        @foreach ($contacts as $index => $contact)
                             <tr>
                                 <td>{{ ++$index }}</td>
-                                <td><img src="{{ asset($user->profile_image) }}" alt="Image profile"></td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->created_at }}</td>
+                                <td><span class="font-weight-bold">{{ $contact->first_name }}</span> {{ $contact->last_name }}</td>
+                                <td>{{ $contact->mobile }}</td>
+                                <td>{{ $contact->email }} <br> {{ $contact->country }}</td>
+                                <td>{{ $contact->solutions->solution_name }}</td>
+                                <td>{{ $contact->notes }}</td>
+                                <td>{{ $contact->created_at }}</td>
                                 <td>
-                                    <form action="{{ route('users.destroy', $user->id) }}" method="post" id="deleteForm">
-                                        @if (authInfo()->isAbleTo('edit-user'))
-                                            <a class="btn btn-warning" href="{{ route('users.edit', $user->id) }}"><i
-                                                    class="fa fa-edit"></i> Edit</a>
-                                        @endif
-
+                                    <form action="{{ route('contacts.destroy', $contact->id) }}" method="post" id="deleteForm">
                                         @csrf
                                         @method('DELETE')
 
-                                        @if (authInfo()->isAbleTo('delete-user'))
+                                        @if (authInfo()->isAbleTo('delete-contact'))
                                             <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
                                                 Trash</button>
                                         @endif

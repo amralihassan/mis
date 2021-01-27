@@ -26,8 +26,7 @@ class SolutionRequest extends FormRequest
         return [
             'type' => ['required'],
             'solution_name' => ['required','max:100'],
-            'abstract' => ['required','max:10'],
-            'description' => ['required','max:190'],
+            'description' => ['required'],
             'solution_image' => ['required','image','mimes:png,jpg'],
             'sort' => ['required','numeric'],
         ];

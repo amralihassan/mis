@@ -204,5 +204,31 @@
                 </div>
             </td>
         </tr>
+
+        <tr>
+            <td>Solutions</td>
+            <td>
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck21"
+                        {{ in_array(21, $role->permissions->pluck('id')->toArray()) ? 'checked' : '' }}
+                        name="permissions[]" value="21">
+                    <label class="custom-control-label" for="customCheck21"></label>
+                </div>
+            </td>
+            <td>
+                -
+            </td>
+            <td>
+                -
+            </td>
+            <td>
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck22"
+                        {{ in_array(22, $role->permissions->pluck('id')->toArray()) ? 'checked' : '' }}
+                        name="permissions[]" value="22">
+                    <label class="custom-control-label" for="customCheck22"></label>
+                </div>
+            </td>
+        </tr>
     </tbody>
 </table>

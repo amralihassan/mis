@@ -23,7 +23,7 @@ class SolutionController extends Controller
      */
     public function index()
     {
-        $solutions = SolutionOp::__fetchAll();
+        $solutions = SolutionOp::_fetchAll();
         return view('back-end.pages.solutions.index', compact('solutions'));
     }
 

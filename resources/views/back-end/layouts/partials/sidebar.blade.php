@@ -60,7 +60,10 @@
                         @if (authInfo()->isAbleTo('view-solutions'))
                             <li><a href="{{ route('solutions.index') }}">Solutions</a></li>
                         @endif
-                        <li><a href="{{ route('contact') }}">Contact</a></li>
+                        @if (authInfo()->isAbleTo('view-contacts'))
+                            <li><a href="{{ route('contacts.index') }}">Contacts</a></li>
+
+                        @endif
                     </ul>
                 </li>
 

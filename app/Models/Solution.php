@@ -10,7 +10,7 @@ class Solution extends Model
 
     public function scopeSort($q)
     {
-        return $q->orderBy('sort', 'asc');
+        return $q->orderBy('type', 'desc')->orderBy('sort', 'asc');
     }
 
     public function getUpdatedAtAttribute($value)

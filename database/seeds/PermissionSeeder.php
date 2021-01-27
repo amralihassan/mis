@@ -47,6 +47,9 @@ class PermissionSeeder extends Seeder
         $permissions[] = Permission::create(['name' => 'edit-solution', 'display_name' => 'Edit Solution', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-solution', 'display_name' => 'Delete Solution', 'description' => '']);
 
+        $permissions[] = Permission::create(['name' => 'view-contacts', 'display_name' => 'View Contact', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-contact', 'display_name' => 'Delete Contact', 'description' => '']);
+
         $owner->attachPermissions($permissions);
     }
 }

@@ -20,7 +20,7 @@ class CreateContactsTable extends Migration
             $table->string('email');
             $table->string('mobile');
             $table->string('country');
-            $table->text('notes');
+            $table->text('notes')->nullable();
             $table->unsignedBigInteger('solution_id');
             $table->foreign('solution_id')->references('id')->on('solutions');
             $table->timestamps();

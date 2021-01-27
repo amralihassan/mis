@@ -7,7 +7,7 @@ use Intervention\Image\Facades\Image;
 
 class SolutionOp extends Solution
 {
-    public static function __fetchAll()
+    public static function _fetchAll()
     {
         return Solution::sort()->paginate(5);
     }

@@ -15,7 +15,7 @@ class CreateTableSolutions extends Migration
     {
         Schema::create('solutions', function (Blueprint $table) {
             $table->id();
-            $table->enum('type',['software','network'])->default('software');
+            $table->enum('type',['Software','Network'])->default('software');
             $table->string('solution_name');
             $table->string('abstract')->nullable();
             $table->text('description')->nullable();

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\FrontEnd;
 use App\Http\Controllers\Controller;
 use App\Models\Operations\CarouselOp;
 use App\Models\Operations\CompanyOp;
+use App\Models\Operations\ContactOp;
 use App\Models\Operations\SolutionOp;
 
 class WebsiteController extends Controller
@@ -36,8 +37,16 @@ class WebsiteController extends Controller
 
     public function contact()
     {
-        return view('front-end.contact');
+        $solutions = SolutionOp::_fetchAll();
+        return view('front-end.contact', compact('solutions'));
     }
+
+    public function storeContacts()
+    {
+        ContactOp::_store();
+        return redirect()->back();
+    }
+
     public function service()
     {
         return view('front-end.service');
