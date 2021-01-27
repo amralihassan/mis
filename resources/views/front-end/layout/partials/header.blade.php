@@ -86,7 +86,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="{{ route('home') }}"><img
-                            src="{{ asset('site/images/logos/logo-hosting.png') }}" alt="image"></a>
+                            src="{{ asset(settings()->logo_image) }}" alt="image"></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

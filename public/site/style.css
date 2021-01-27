@@ -20,7 +20,6 @@
     17. BUTTONS
 -------------------------------------------------------------------*/
 
-
 /*------------------------------------------------------------------
     IMPORT FONTS
 -------------------------------------------------------------------*/
@@ -605,7 +604,7 @@ li.social-links a {
 }
 
 .first-section h2 strong{
-	color: #00aeef;
+	color: #ea585c;
 }
 
 .first-section .lead {
@@ -2577,9 +2576,16 @@ span.m_1 {
 
 
 
+.control-round .carousel-control{
+    background: #ea5b58;
+}
+.indicators-line > .carousel-indicators .active {
+    box-shadow: 0 0 0 2px #ea5b58;
+}
 
-
-
+.indicators-line > .carousel-indicators .active:before {
+    background: #ea5b58;
+}
 
 
 

@@ -10,85 +10,34 @@
             <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <div id="home" class="first-section"
-                    style="background-image:url('{{ asset('site/uploads/slider-01.jpg') }}');">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <img src="{{ asset('site/images/logos/logo-hosting.png') }}" alt="image">
-                                    <h2 data-animation="animated zoomInRight">Multi <strong>Information</strong> Systems
-                                    </h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">Multi-Information Systems is a
-                                        technology partner leveraging the
-                                        latest technologies and premier vendors in the design and support of IT
-                                        infrastructure to produce better business outcomes for our clients.. </p>
-                                    <a data-scroll href="#pricing"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInLeft">Network Solutions</a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a data-scroll href="#overviews"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInRight">Software Solutions</a>
+            @foreach ($carousels as $carousel)
+                <div class="item {{ $loop->first ? 'active' : '' }}">
+                    <div id="home" class="first-section"
+                        style="background-image:url('{{ asset('storage/carousels/' . $carousel->slide_image) }}');">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 text-center">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight">{!! $carousel->title !!}
+                                        </h2>
+                                        <p class="lead" data-animation="animated fadeInLeft">
+                                            {!! $carousel->paragraph !!}
+                                        </p>
+                                        <a data-scroll href="#pricing"
+                                            class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
+                                            data-animation="animated fadeInLeft">Network Solutions</a>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-scroll href="#overviews"
+                                            class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
+                                            data-animation="animated fadeInRight">Software Solutions</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div><!-- end section -->
-            </div>
-            <div class="item">
-                <div id="home" class="first-section"
-                    style="background-image:url('{{ asset('site/uploads/slider-02.jpg') }}');">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <img src="{{ asset('site/images/logos/logo-hosting.png') }}" alt="image">
-                                    <h2 data-animation="animated zoomInRight">Find the right <strong>Solutions</strong></h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">We provide software solutions by
-                                        creating web and mobile applications as well as solutions for computer networks and
-                                        surveillance cameras. </p>
-                                    <a data-scroll href="#pricing"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInLeft">Network Solutions</a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a data-scroll href="#overviews"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInRight">Software Solutions</a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div><!-- end section -->
-            </div>
-            <div class="item">
-                <div id="home" class="first-section"
-                    style="background-image:url('{{ asset('site/uploads/slider-03.jpg') }}');">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <img src="{{ asset('site/images/logos/logo-hosting.png') }}" alt="image">
-                                    <h2 data-animation="animated zoomInRight">Best <strong>Software & Networking</strong>
-                                        Company</h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">1 IP included with each server
-                                        (more on request to justification)
-                                        Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-                                        FREE Reboots</p>
-                                    <a data-scroll href="#pricing"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInLeft">Network Solutions</a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a data-scroll href="#overviews"
-                                        class="btn btn-light btn-radius btn-brd effect-1 slide-btn"
-                                        data-animation="animated fadeInRight">Software Solutions</a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div><!-- end section -->
-            </div>
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div><!-- end section -->
+                </div>
+            @endforeach
+
             <!-- Left Control -->
             <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
                 <span class="fa fa-angle-left" aria-hidden="true"></span>
@@ -109,7 +58,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500'>About</h3>
                     <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='1600' class="lead">
-                        {{ $company->about }}
+                        {!! $company->about !!}
                     </p>
                 </div>
             </div><!-- end title -->
@@ -119,7 +68,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500' data-aos-delay='3200'>Mission</h3>
                     <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='4700' class="lead">
-                        {{ $company->mission }}
+                        {!! $company->mission !!}
                     </p>
                 </div>
             </div><!-- end title -->
@@ -129,7 +78,7 @@
                 <div class="col-md-8 col-md-offset-2">
                     <h3 data-aos='zoom-in-down' data-aos-duration='1500' data-aos-delay='6300'>Vision</h3>
                     <p data-aos='zoom-in-up' data-aos-duration='1500' data-aos-delay='7900' class="lead">
-                        {{ $company->vision }}</p>
+                        {!! $company->vision !!}</p>
                 </div>
             </div><!-- end title -->
             <hr class="hr3">

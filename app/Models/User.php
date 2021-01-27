@@ -56,4 +56,9 @@ class User extends Authenticatable
             return 'storage/users/profile.jpg';
         }
     }
+
+    public function carousels()
+    {
+        return $this->hasMany('App\Models\Carousel','user_id');
+    }
 }

@@ -18,7 +18,7 @@ class SettingOp extends Setting
             }
             $image = $request->file('logo');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(128, 128)->save(public_path('storage/web-settings/' . $filename));
+            Image::make($image)->resize(186, 41)->save(public_path('storage/web-settings/' . $filename));
             $data->logo = $filename;
             $data->save();
         }

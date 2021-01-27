@@ -26,13 +26,19 @@ class PermissionSeeder extends Seeder
         $permissions[] = Permission::create(['name' => 'edit-user', 'display_name' => 'Edit User', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-user', 'display_name' => 'Delete User', 'description' => '']);
 
-        $permissions[] = Permission::create(['name' => 'view-roles', 'display_name' => 'Update Role', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'add-role', 'display_name' => 'Update Role', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'edit-role', 'display_name' => 'Update Role', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'delete-role', 'display_name' => 'Update Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'view-roles', 'display_name' => 'View Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'add-role', 'display_name' => 'Add Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-role', 'display_name' => 'Edit Role', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-role', 'display_name' => 'Delete Role', 'description' => '']);
 
         $permissions[] = Permission::create(['name' => 'view-settings', 'display_name' => 'View Settings', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'update-settings', 'display_name' => 'Update Settings', 'description' => '']);
+
+        $permissions[] = Permission::create(['name' => 'view-carousels', 'display_name' => 'View Slideshow', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'add-carousel', 'display_name' => 'Add Slideshow', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-carousel', 'display_name' => 'Edit Slideshow', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-carousel', 'display_name' => 'Delete Slideshow', 'description' => '']);
+
         $owner->attachPermissions($permissions);
     }
 }

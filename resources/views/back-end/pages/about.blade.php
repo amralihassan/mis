@@ -23,8 +23,8 @@
                             <div class="form-group row">
                                 <label for="about">About</label>
 
-                                <textarea class="form-control" name="about" id="about" required cols="30"
-                                    rows="10">{{ old('about', $company->about) }}</textarea>
+                                <textarea class="form-control editor" name="about" id="about" required cols="30"
+                                    rows="5">{{ old('about', $company->about) }}</textarea>
                                 @error('about')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -38,8 +38,8 @@
                             <div class="form-group row">
                                 <label for="mission">Mission</label>
 
-                                <textarea class="form-control" name="mission" id="mission" required cols="30"
-                                    rows="10">{{ old('mission', $company->mission) }}</textarea>
+                                <textarea class="form-control editor" name="mission" id="mission" required cols="30"
+                                    rows="5">{{ old('mission', $company->mission) }}</textarea>
                                 @error('mission')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -53,8 +53,8 @@
                             <div class="form-group row">
                                 <label for="vision">Vision</label>
 
-                                <textarea class="form-control" name="vision" id="vision" required cols="30"
-                                    rows="10">{{ old('vision', $company->vision) }}</textarea>
+                                <textarea class="form-control editor" name="vision" id="vision" required cols="30"
+                                    rows="5">{{ old('vision', $company->vision) }}</textarea>
                                 @error('vision')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -125,4 +125,6 @@
 @section('script')
     <script src="{{ asset('cPanel/assets/libs/parsleyjs/parsley.min.js') }}"></script>
     <script src="{{ asset('cPanel/assets/js/pages/form-validation.init.js') }}"></script>
+
+
 @endsection

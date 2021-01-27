@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('company/data', 'CompanyController@company')->name('company.data');
 Route::post('/company/data/update','CompanyController@update')->name('update.company.data');
 
+// CAROUSEL
+Route::resource('carousels','CarouselController');
+
 // SOLUTIONS
 Route::get('solutions', 'HomeController@solutions')->name('solutions');
 
