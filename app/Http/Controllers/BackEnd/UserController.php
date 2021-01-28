@@ -3,6 +3,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Models\Operations\RoleOp;
 use App\Models\Operations\UserOp;
 use App\Models\User;
 
@@ -22,6 +23,7 @@ class UserController extends Controller
      */
     public function index()
     {
+
         $users = UserOp::_fetchAll();
         return view('back-end.users.index', compact('users'));
     }
@@ -34,8 +36,9 @@ class UserController extends Controller
     public function create()
     {
         $user = new User;
+        $roles = RoleOp::_fetchAll();
         $active = true;
-        return view('back-end.users.create', compact('user', 'active'));
+        return view('back-end.users.create', compact('user', 'active', 'roles'));
     }
 
     /**
@@ -60,8 +63,9 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = UserOp::_fetchById($id);
+        $roles = RoleOp::_fetchAll();
         $active = false;
-        return view('back-end.users.edit', compact('user', 'active'));
+        return view('back-end.users.edit', compact('user', 'active', 'roles'));
     }
 
     /**

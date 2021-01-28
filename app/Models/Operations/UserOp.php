@@ -25,6 +25,8 @@ class UserOp extends User
             'password' => $request->password,
         ]));
         self::updateImage($request, $user);
+
+        $user->attachRoles($request->role_id);
         return true;
     }
 
@@ -34,8 +36,14 @@ class UserOp extends User
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
+            'password' => $request->password,
         ]);
         self::updateImage($request, $user);
+
+        if(!empty($request->role_id))
+        {
+            $user->syncRoles($request->role_id);
+        }
         return true;
     }
 
@@ -66,4 +74,5 @@ class UserOp extends User
     {
         return User::count();
     }
+
 }

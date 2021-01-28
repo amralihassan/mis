@@ -51,7 +51,7 @@
                         <span>Pages</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        @if (authInfo()->isAbleTo('view-solutions'))
+                        @if (authInfo()->isAbleTo('view-carousels'))
                             <li><a href="{{ route('carousels.index') }}">Slideshow</a></li>
                         @endif
                         @if (authInfo()->isAbleTo('view-company'))

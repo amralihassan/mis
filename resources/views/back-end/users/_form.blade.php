@@ -33,8 +33,27 @@
         @enderror
     </div>
 </div>
-@if ($active)
 
+
+@if ($active)
+    <div class="col-md-6">
+        <div class="form-group row">
+            <label for="role_id">Role</label>
+            <select name="role_id[]" class="form-control" required>
+                <option value="">Select</option>
+                @foreach ($roles as $role)
+                    <option {{old('role_id' , in_array($role->id,$user->roles->pluck('id')->toArray())) ? 'selected' :''}} value="{{$role->id}}">{{$role->display_name}}</option>
+                @endforeach
+            </select>
+            @error('role_id')
+                <div class="invalid-feedback">
+                    {{ $message }}
+                </div>
+            @enderror
+        </div>
+    </div>
+
+    @endif
     <div class="col-md-6">
         <div class="form-group row">
             <label for="validationCustom02">Password</label>
@@ -59,7 +78,6 @@
             @enderror
         </div>
     </div>
-@endif
 
 <div class="col-md-3">
     <div class="form-group row">

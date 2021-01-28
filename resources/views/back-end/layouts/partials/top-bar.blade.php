@@ -37,6 +37,7 @@
                     <span class="d-none d-xl-inline-block ml-1">{{authInfo()->name}}</span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>
+
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
                     <a class="dropdown-item" href="{{route('profile')}}"><i class="ri-user-line align-middle mr-1"></i> Profile</a>

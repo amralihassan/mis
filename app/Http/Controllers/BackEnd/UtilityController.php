@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\SettingRequest;
 use App\Http\Requests\UserRequest;
+use App\Models\Operations\RoleOp;
 use App\Models\Operations\SettingOp;
 use App\Models\Operations\UserOp;
 
@@ -18,8 +19,9 @@ class UtilityController extends Controller
     public function profile()
     {
         $user = authInfo();
+        $roles = RoleOp::_fetchAll();
         $active = false;
-        return view('back-end.profile', compact('user', 'active'));
+        return view('back-end.profile', compact('user', 'active', 'roles'));
     }
 
     public function updateProfile(UserRequest $request, $id)
@@ -51,4 +53,5 @@ class UtilityController extends Controller
         auth()->guard('web')->logout();
         return redirect()->route('home');
     }
+
 }

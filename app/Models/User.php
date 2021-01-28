@@ -59,11 +59,16 @@ class User extends Authenticatable
 
     public function carousels()
     {
-        return $this->hasMany('App\Models\Carousel','user_id');
+        return $this->hasMany('App\Models\Carousel', 'user_id');
     }
 
     public function solutions()
     {
-        return $this->hasMany('App\Models\Solution','user_id');
+        return $this->hasMany('App\Models\Solution', 'user_id');
+    }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
     }
 }
