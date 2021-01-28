@@ -25,4 +25,9 @@ class ContactOp extends Contact
         $contact->delete();
         return true;
     }
+
+    public static function _count()
+    {
+        return Contact::count();
+    }
 }

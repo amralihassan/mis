@@ -61,4 +61,9 @@ class UserOp extends User
             $user->save();
         }
     }
+
+    public static function _count()
+    {
+        return User::count();
+    }
 }

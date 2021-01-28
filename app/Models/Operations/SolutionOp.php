@@ -35,7 +35,7 @@ class SolutionOp extends Solution
 
             $image = $request->file('solution_image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            Image::make($image)->resize(800, 533)->save(public_path('storage/solutions/' . $filename));
+            Image::make($image)->resize(800, 650)->save(public_path('storage/solutions/' . $filename));
             $solutions->solution_image = $filename;
             $solutions->save();
         }
@@ -66,5 +66,15 @@ class SolutionOp extends Solution
     public static function networks()
     {
         return Solution::sort()->network()->get();
+    }
+
+    public static function _networkCount()
+    {
+        return Solution::network()->count();
+    }
+
+    public static function _softwareCount()
+    {
+        return Solution::software()->count();
     }
 }

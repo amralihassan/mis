@@ -9,13 +9,13 @@
     <div id="service" class="section wb" style="background: rgb(248, 248, 248)">
         <div class="container">
 
-            <div class="row dev-list text-center" data-aos='zoom-in' data-aos-duration='1000'>
+            <div class="row  text-justify" data-aos='zoom-in' data-aos-duration='1000'>
                 <div class="col-12 wow " data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="widget clearfix row">
 
                         <div class="col-md-6 col-sm-12" data-aos='fade-right' data-aos-duration='1500'
                             data-aos-delay='1050'>
-                            <div class="widget-title">
+                            <div class="widget-title text-center">
                                 <h3>{{ $solution->solution_name }}</h3>
                                 <small>{{ $solution->abstract }}</small>
                             </div>

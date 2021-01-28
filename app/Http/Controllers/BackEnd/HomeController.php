@@ -2,6 +2,9 @@
 namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
+use App\Models\Operations\ContactOp;
+use App\Models\Operations\SolutionOp;
+use App\Models\Operations\UserOp;
 
 class HomeController extends Controller
 {
@@ -22,7 +25,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('back-end.home');
+        $users = UserOp::_count();
+        $contacts = ContactOp::_count();
+        $networks = SolutionOp::_networkCount();
+        $softwares = SolutionOp::_softwareCount();
+        return view('back-end.home', compact('users', 'networks', 'contacts', 'softwares'));
     }
 
     public function about()
@@ -39,7 +46,5 @@ class HomeController extends Controller
     {
 
     }
-
-
 
 }
