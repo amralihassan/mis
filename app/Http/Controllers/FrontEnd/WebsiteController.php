@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Controllers\Controller;
-use App\Models\Operations\CarouselOp;
-use App\Models\Operations\CompanyOp;
 use App\Models\Operations\ContactOp;
 use App\Models\Operations\SolutionOp;
 
@@ -12,22 +10,28 @@ class WebsiteController extends Controller
 {
     public function homepage()
     {
-        $company = CompanyOp::data();
-        $carousels = CarouselOp::_fetchAll();
-        return view('front-end.home', compact('company', 'carousels'));
+        return view('front-end.home');
     }
 
-    public function solutions()
+    public function about()
     {
-        $softwares = SolutionOp::softwares();
-        $networks = SolutionOp::networks();
-        return view('front-end.solutions', compact('softwares', 'networks'));
+        return view('front-end.about');
     }
 
-    public function showSolution($id)
+    public function softwareSolutions()
     {
-        $solution = SolutionOp::_fetchById($id);
-        return view('front-end.show-solution', compact('solution'));
+
+        return view('front-end.software-solutions');
+    }
+
+    public function networkSolutions()
+    {
+        return view('front-end.network-solutions');
+    }
+
+    public function showSolution()
+    {
+        return view('front-end.show-solution');
     }
 
     public function projects()
@@ -47,8 +51,4 @@ class WebsiteController extends Controller
         return redirect()->back();
     }
 
-    public function service()
-    {
-        return view('front-end.service');
-    }
 }

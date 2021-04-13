@@ -1,89 +1,133 @@
-<footer class="footer">
-    <div class="container">
+<footer class="footer" id="end">
+    <div class="container-fluid px-lg-5">
         <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <img src="{{ asset(settings()->logo_image) }}" alt="">
-                        <small>{{settings()->website_name}}</small>
+            <div class="col-md-9 py-5">
+                <div class="row">
+                    <div class="col-md-3 mb-md-0 mb-4">
+                        <h2 class="footer-heading">About us</h2>
+                        <p> We cover the entire IT spectrum, web applications to enterprise solutions.</p>
+                        <p>Address : 417 Omar Ibn EL Khatab, 6th of October, Giza</p>
+
+                        <p> <a href="tel://01270876060" class="text-secondary">Phone : +2 01270876060</a></p>
+                        <ul class="ftco-footer-social p-0">
+
+                            <li class="ftco-animate"><a
+                                    href="https://www.facebook.com/Multi-Information-Systems-115024650315294"
+                                    target="blank" data-toggle="tooltip" data-placement="top" title="Facebook"><span
+                                        class="fa fa-facebook"></span></a></li>
+                            <li class="ftco-animate"><a href="#" target="blank" data-toggle="tooltip"
+                                    data-placement="top" title="linkedin"><span class="fa fa-linkedin"></span></a></li>
+                            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                                    title="Instagram"><span class="fa fa-instagram"></span></a></li>
+                        </ul>
                     </div>
-                    <p> {{settings()->description}}</p>
+                    <div class="col-md-8">
+                        <div class="row justify-content-center">
+                            <div class="col-md-12 col-lg-10">
+                                <div class="row">
+                                    <div class="col-md-6 mb-md-0 mb-6">
+                                        <h2 class="footer-heading">Solutions</h2>
+                                        <ul class="list-unstyled">
+                                            <li><a href="net.html" class="py-1 d-block">Network Solutions</a></li>
 
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
+                                            <li><a href="soft.html" class="py-1 d-block">Software Solutions
+                                                </a></li>
 
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <h3>Information Link</h3>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6 mb-md-0 mb-6">
+                                        <h2 class="footer-heading">Discover</h2>
+                                        <ul class="list-unstyled">
+                                            <li><a href="about.html" class="py-1 d-block">About us</a></li>
+                                            <li><a href="contact.html" class="py-1 d-block">Contact us</a></li>
+                                            <li><a href="index.html" class="py-1 d-block">Terms &amp; Conditions</a>
+                                            </li>
+                                            <li><a href="project.html" class="py-1 d-block">Policies</a></li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Solutions</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul><!-- end links -->
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
+                </div>
+                <div class="row mt-md-5">
+                    <div class="col-md-12 ml-5">
+                        <p class="copyright">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;<script>
+                                document.write(new Date().getFullYear());
 
-            <div class="col-md-3 col-sm-3 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <h3>Contact Details</h3>
+                            </script> All rights reserved
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
                     </div>
-
-                    <ul class="footer-links">
-                        <li><a href="mailto:#">{{settings()->email}}</a></li>
-                        <li><a href="#">{{settings()->website}}</a></li>
-                        <li>{{settings()->address}}</li>
-                        <li>{{settings()->contact}}</li>
-                    </ul><!-- end links -->
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
-
-            <div class="col-md-2 col-sm-2 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <h3>Social</h3>
-                    </div>
-                    <ul class="footer-links">
-                        <li><a href="{{settings()->facebook}}"><i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li><a href="{{settings()->youtube}}"><i class="fa fa-youtube"></i> Youtube</a></li>
-                    </ul><!-- end links -->
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</footer><!-- end footer -->
-
-<div class="copyrights">
-    <div class="container">
-        <div class="footer-distributed">
-            <div class="footer-left">
-                <p class="footer-company-name">All Rights Reserved. &copy; 2018 <a href="#">HostCloud</a> Design By : <a href="https://html.design/">html design</a></p>
+                </div>
             </div>
+            <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+                <h2 class="footer-heading">Contact Us</h2>
+                <form action="#" class="form-consultation">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
 
-            <div class="footer-right">
-                <form method="get" action="#">
-                    <input placeholder="Subscribe our newsletter.." name="search">
-                    <i class="fa fa-envelope-o"></i>
+                        <input list="service" id="servlist" name="servlist" placeholder="Solutions"
+                            class="form-control" />
+
+                        <datalist id="service">
+                            <option value="Network Solutions">
+                            <option value="Software Solutions">
+                        </datalist>
+
+                    </div>
+                    <div class="form-group">
+                        <textarea name="" id="" cols="30" rows="3" class="form-control"
+                            placeholder="Description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="form-control submit px-3">Send A Message</button>
+                    </div>
                 </form>
             </div>
         </div>
-    </div><!-- end container -->
-</div><!-- end copyrights -->
+    </div>
+</footer>
 
-<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
 
-<!-- ALL JS FILES -->
-<script src="{{asset('site/js/all.js')}}"></script>
-<!-- ALL PLUGINS -->
-<script src="{{asset('site/js/custom.js')}}"></script>
-<!-- AOS Library -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
+<div id="stop" class="scrollTop">
+    <span><a href="">Top</a></span>
+</div>
+
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+            stroke="#F96D00" />
+    </svg></div>
+
+
+<script src="{{asset('site/js/jquery.min.js')}}"></script>
+<script src="{{asset('site/js/jquery-migrate-3.0.1.min.js')}}"></script>
+<script src="{{asset('site/js/popper.min.js')}}"></script>
+<script src="{{asset('site/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.easing.1.3.js')}}"></script>
+<script src="{{asset('site/js/jquery.waypoints.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.stellar.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.animateNumber.min.js')}}"></script>
+<script src="{{asset('site/js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('site/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('site/js/scrollax.min.js')}}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="{{asset('site/js/google-map.js')}}"></script>
+<script src="{{asset('site/js/main.js')}}"></script>
 
 </body>
+
 </html>

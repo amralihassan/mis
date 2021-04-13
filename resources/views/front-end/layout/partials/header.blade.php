@@ -1,102 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <!-- Basic -->
+<head>
+    <title>MIS</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
+        rel="stylesheet">
 
-     <!-- Site Metas -->
-    <title>{{settings()->website_name}}</title>
-    <meta name="keywords" content="{{settings()->keywords}}">
-    <meta name="description" content="{{settings()->description}}">
-    <meta name="author" content="{{settings()->author}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        <!-- AOS Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('site/css/animate.css')}}">
 
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="{{asset('site/images/favicon.ico')}}" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="{{asset('site/images/apple-touch-icon.png')}}">
+    <link rel="stylesheet" href="{{asset('site/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('site/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('site/css/magnific-popup.css')}}">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('site/css/bootstrap.min.css')}}">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="{{asset('site/style.css')}}">
-    <!-- Colors CSS -->
-    <link rel="stylesheet" href="{{asset('site/css/colors.css')}}">
-    <!-- ALL VERSION CSS -->
-    <link rel="stylesheet" href="{{asset('site/css/versions.css')}}">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="{{asset('site/css/responsive.css')}}">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{asset('site/css/custom.css')}}">
-
-    <!-- Modernizer for Portfolio -->
-    <script src="{{asset('site/js/modernizer.js')}}"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <link rel="stylesheet" href="{{asset('site/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('site/css/style.css')}}">
 </head>
-<body class="host_version">
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loading">
-            <div class="finger finger-1">
-                <div class="finger-item">
-                    <span></span><i></i>
+
+<body>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="bg-wrap">
+                        <div class="row">
+                            <div class="col-md-10 d-flex align-items-center">
+                                <p class="mb-0 phone pl-md-1 text-nowrap">
+                                    <a href="net.html" class="  font-weight-bold"> System integration Services</a>
+                                    <a href="soft.html" class=" font-weight-bold"> &amp; Software Solutions </a>
+                                </p>
+                            </div>
+                            <div class="col-md-2 d-flex justify-content-md-end">
+                                <div class="social-media">
+                                    <p class="mb-0 d-flex text-info">
+                                        <a href="https://www.facebook.com/Multi-Information-Systems-115024650315294"
+                                            target="blank"
+                                            class="d-flex align-items-center justify-content-center"><span
+                                                class="fa fa-facebook "><i class="sr-only ">Facebook</i></span></a>
+
+                                        <a href="#"
+                                            class="d-flex align-items-center text-info justify-content-center"><span
+                                                class="fa "><i class="fab fa-linkedin "></i></span></a>
+
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                                                class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+
+                                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                                                class="fa "><i class="fab fa-youtube"></i></span></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="finger finger-2">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="finger finger-3">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="finger finger-4">
-                <div class="finger-item">
-                    <span></span><i></i>
-                </div>
-            </div>
-            <div class="last-finger">
-                <div class="last-finger-item"><i></i></div>
             </div>
         </div>
     </div>
-    <!-- END LOADER -->
 
-    <header class="header header_style_01">
-        <nav class="megamenu navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                        aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="{{ route('home') }}"><img
-                            src="{{ asset(settings()->logo_image) }}" alt="image"></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a class="{{request()->segment(1) == 'home' ? 'active':''}}" href="{{ route('home') }}">Home</a></li>
-                        <li><a class="{{request()->segment(1) == 'solutions' ? 'active':''}}" href="{{ route('solutions') }}">Solutions</a></li>
-                        <li><a class="{{request()->segment(1) == 'projects' ? 'active':''}}" href="{{ route('projects') }}">Projects</a></li>
-                        <li><a class="{{request()->segment(1) == 'contact' ? 'active':''}}" href="{{ route('contact') }}">Contact</a></li>
-                    </ul>
-
-                </div>
+    <!-- start nav -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <div>
+                <a class="navbar-brand text-danger text-center w-50" href="{{route('home')}}"><img src="{{asset('site/images/logo (1).png')}}"
+                        style="width: 30%;"><span class="text-danger"
+                        style="font-size: smaller; font-weight: bolder;">Multi Information Systems</span> </a>
             </div>
-        </nav>
-    </header>
+            <button class="navbar-toggler float-left " type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item active"><a href="{{route('home')}}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="{{route('about')}}" class="nav-link">About</a></li>
+                    <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle text-nowrap" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Solutions
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{route('network-solutions')}}">Network Solutions</a>
+                            <a class="dropdown-item" href="{{route('software-solutions')}}">Software Solutions</a>
+                            <div class="dropdown-divider"></div>
+
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="{{route('projects')}}" class="nav-link">Projects</a></li>
+
+                    <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- END nav -->

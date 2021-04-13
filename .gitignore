@@ -4,7 +4,7 @@
 /storage/*.key
 /vendor
 /Vertical
-/resource/front-end/template
+/resource/website-misfinal
 .env
 .env.backup
 .phpunit.result.cache
