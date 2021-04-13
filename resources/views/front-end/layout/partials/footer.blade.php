@@ -28,9 +28,9 @@
                                     <div class="col-md-6 mb-md-0 mb-6">
                                         <h2 class="footer-heading">Solutions</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="net.html" class="py-1 d-block">Network Solutions</a></li>
+                                            <li><a href="{{route('network-solutions')}}" class="py-1 d-block">Network Solutions</a></li>
 
-                                            <li><a href="soft.html" class="py-1 d-block">Software Solutions
+                                            <li><a href="{{route('software-solutions')}}" class="py-1 d-block">Software Solutions
                                                 </a></li>
 
                                         </ul>
@@ -38,11 +38,11 @@
                                     <div class="col-md-6 mb-md-0 mb-6">
                                         <h2 class="footer-heading">Discover</h2>
                                         <ul class="list-unstyled">
-                                            <li><a href="about.html" class="py-1 d-block">About us</a></li>
-                                            <li><a href="contact.html" class="py-1 d-block">Contact us</a></li>
-                                            <li><a href="index.html" class="py-1 d-block">Terms &amp; Conditions</a>
-                                            </li>
-                                            <li><a href="project.html" class="py-1 d-block">Policies</a></li>
+                                            <li><a href="{{route('about')}}" class="py-1 d-block">About us</a></li>
+                                            <li><a href="{{route('contact')}}" class="py-1 d-block">Contact us</a></li>
+                                            {{-- <li><a href="index.html" class="py-1 d-block">Terms &amp; Conditions</a> --}}
+                                            {{-- </li> --}}
+                                            {{-- <li><a href="project.html" class="py-1 d-block">Policies</a></li> --}}
                                         </ul>
                                     </div>
 
