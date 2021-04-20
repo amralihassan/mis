@@ -42,10 +42,10 @@ class PermissionSeeder extends Seeder
         $permissions[] = Permission::create(['name' => 'edit-carousel', 'display_name' => 'Edit Slideshow', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-carousel', 'display_name' => 'Delete Slideshow', 'description' => '']);
 
-        $permissions[] = Permission::create(['name' => 'view-solutions', 'display_name' => 'View Solution', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'add-solution', 'display_name' => 'Add Solution', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'edit-solution', 'display_name' => 'Edit Solution', 'description' => '']);
-        $permissions[] = Permission::create(['name' => 'delete-solution', 'display_name' => 'Delete Solution', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'view-projects', 'display_name' => 'View project', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'add-project', 'display_name' => 'Add project', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'edit-project', 'display_name' => 'Edit project', 'description' => '']);
+        $permissions[] = Permission::create(['name' => 'delete-project', 'display_name' => 'Delete project', 'description' => '']);
 
         $permissions[] = Permission::create(['name' => 'view-contacts', 'display_name' => 'View Contact', 'description' => '']);
         $permissions[] = Permission::create(['name' => 'delete-contact', 'display_name' => 'Delete Contact', 'description' => '']);

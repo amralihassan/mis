@@ -7,8 +7,10 @@ Route::post('/company/data/update', 'CompanyController@update')->name('update.co
 // CAROUSEL
 Route::resource('carousels', 'CarouselController')->except('show');
 
-// SOLUTIONS
-Route::resource('solutions', 'SolutionController')->except('show');
+// PROJECTS
+Route::resource('projects', 'ProjectController');
+Route::post('project/upload/image','ProjectController@uploadProjectImage')->name('image.store');
+Route::delete('project/delete/image/{image_id}','ProjectController@deleteProjectImage')->name('image.delete');
 
 // CONTACT
 Route::resource('contacts', 'ContactController')->only('index', 'destroy');

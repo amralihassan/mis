@@ -57,12 +57,11 @@
                         @if (authInfo()->isAbleTo('view-company'))
                             <li><a href="{{ route('company.data') }}">About</a></li>
                         @endif
-                        @if (authInfo()->isAbleTo('view-solutions'))
-                            <li><a href="{{ route('solutions.index') }}">Solutions</a></li>
+                        @if (authInfo()->isAbleTo('view-projects'))
+                            <li><a href="{{ route('projects.index') }}">Projects</a></li>
                         @endif
                         @if (authInfo()->isAbleTo('view-contacts'))
                             <li><a href="{{ route('contacts.index') }}">Contacts</a></li>
-
                         @endif
                     </ul>
                 </li>

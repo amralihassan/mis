@@ -1,14 +1,15 @@
 @extends('back-end.layouts.app')
-
-@section('title', 'Users')
+@section('title', 'Projects')
 @section('content')
     @include("back-end.layouts.partials.page-title",
-    ['pagetitle'=>'Dashoard','title'=>'Users'])
-    @if (authInfo()->isAbleTo('add-user'))
+    ['pagetitle'=>'Dashoard','title'=>'Projects'])
+
+    @if (authInfo()->isAbleTo('add-projects'))
         <div class="mb-2">
-            <a class="btn btn-success" href="{{ route('users.create') }}"><i class="fa fa-plus"></i> New User</a>
+            <a class="btn btn-success" href="{{ route('projects.create') }}"><i class="fa fa-plus"></i> Add Project</a>
         </div>
     @endif
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -18,31 +19,32 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Image</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Created At</th>
+                                <th>Project Name</th>
+                                <th>Works</th>
+                                <th>Images</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        @foreach ($users as $index => $user)
+                        @foreach ($projects as $index => $project)
                             <tr>
                                 <td>{{ ++$index }}</td>
-                                <td><img src="{{ asset($user->profile_image) }}" alt="Image profile"></td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                                <td>{{ $user->created_at }}</td>
+                                <td>{{ $project->project_name }}</td>
+                                <td>{{ $project->works }}</td>
                                 <td>
-                                    <form action="{{ route('users.destroy', $user->id) }}" method="post" id="deleteForm">
-                                        @if (authInfo()->isAbleTo('edit-user'))
-                                            <a class="btn btn-warning" href="{{ route('users.edit', $user->id) }}"><i
+                                    <a class="btn btn-info" href="{{ route('projects.show', $project->id) }}"><i
+                                        class="fa fa-eye"></i> Show Images</a>
+                                </td>
+                                <td>
+                                    <form action="{{ route('projects.destroy', $project->id) }}" method="post" id="deleteForm">
+                                        @if (authInfo()->isAbleTo('edit-projects'))
+                                            <a class="btn btn-warning" href="{{ route('projects.edit', $project->id) }}"><i
                                                     class="fa fa-edit"></i> Edit</a>
                                         @endif
 
                                         @csrf
                                         @method('DELETE')
 
-                                        @if (authInfo()->isAbleTo('delete-user'))
+                                        @if (authInfo()->isAbleTo('delete-projects'))
                                             <button type="submit" class="btn btn-danger"><i class="fa fa-trash"></i>
                                                 Trash</button>
                                         @endif
@@ -56,10 +58,9 @@
             </div>
         </div> <!-- end col -->
     </div> <!-- end row -->
+
 @endsection
 @section('script')
-
-
 
     @include("back-end.layouts.partials.dataTable")
 @endsection
