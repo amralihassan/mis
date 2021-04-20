@@ -28,13 +28,14 @@
                                     <div id="form-message-success" class="mb-4">
                                         Your message was sent, thank you!
                                     </div>
-                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                    <form method="POST" id="contactForm" name="contactForm" class="contactForm" action="{{route('contacts.store')}}">
+                                        @csrf
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="label" for="name">Full Name</label>
-                                                    <input type="text" class="form-control" name="name" id="name"
-                                                        placeholder="Name">
+                                                    <input type="text" class="form-control" name="full_name" id="full_name"
+                                                        placeholder="Full Name">
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -44,7 +45,14 @@
                                                         placeholder="Email">
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label" for="mobile">Mobile</label>
+                                                    <input type="number" class="form-control" name="mobile" id="mobile"
+                                                        placeholder="Mobile">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="label" for="subject">Subject</label>
                                                     <input type="text" class="form-control" name="subject" id="subject"

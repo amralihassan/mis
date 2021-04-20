@@ -38,4 +38,9 @@ class SettingOp extends Setting
 
         return true;
     }
+
+    public static function first()
+    {
+        return Setting::first();
+    }
 }

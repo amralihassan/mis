@@ -15,6 +15,8 @@ class Setting extends Model
         'address',
         'contact',
         'facebook',
+        'linked_in',
+        'instagram',
         'youtube',
         'keywords',
         'owner',

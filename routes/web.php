@@ -1,6 +1,11 @@
 <?php
 
+use App\Models\Operations\SettingOp;
 use Illuminate\Support\Facades\Route;
+
+\App::singleton('settings',function(){
+    return SettingOp::first();
+});
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

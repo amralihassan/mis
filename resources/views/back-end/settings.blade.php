@@ -125,6 +125,36 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="linked_in">Linkedin</label>
+                                <input type="text" id="linked_in" class="form-control" name="linked_in" placeholder="Linkedin"
+                                    value="{{ old('linked_in', settings()->linked_in) }}" >
+                                @error('linked_in')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="instagram">Instagram</label>
+                                <input type="text" id="instagram" class="form-control" name="instagram" placeholder="instagram"
+                                    value="{{ old('instagram', settings()->instagram) }}" >
+                                @error('instagram')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
                                 <label for="owner">Owner</label>
                                 <input type="text" id="owner" class="form-control" name="owner" placeholder="owner"
                                     value="{{ old('owner', settings()->owner) }}" required>

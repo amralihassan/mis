@@ -6,9 +6,9 @@
                     <div class="col-md-3 mb-md-0 mb-4">
                         <h2 class="footer-heading">About us</h2>
                         <p> We cover the entire IT spectrum, web applications to enterprise solutions.</p>
-                        <p>Address : 417 Omar Ibn EL Khatab, 6th of October, Giza</p>
+                        <p>Address : {{app('settings')->address}}</p>
 
-                        <p> <a href="tel://01270876060" class="text-secondary">Phone : +2 01270876060</a></p>
+                        <p> <a href="tel://{{app('settings')->contact}}" class="text-secondary">Phone : {{app('settings')->contact}}</a></p>
                         <ul class="ftco-footer-social p-0">
 
                             <li class="ftco-animate"><a
@@ -66,27 +66,24 @@
             </div>
             <div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
                 <h2 class="footer-heading">Contact Us</h2>
-                <form action="#" class="form-consultation">
+                <form class="form-consultation" method="post" action="{{route('contacts.store')}}">
+                    @csrf
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name">
+                        <input type="text" class="form-control" placeholder="Full Name" name="full_name">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Email">
+                        <input type="text" class="form-control" placeholder="Your Email" name="email">
                     </div>
                     <div class="form-group">
-
-                        <input list="service" id="servlist" name="servlist" placeholder="Solutions"
-                            class="form-control" />
-
-                        <datalist id="service">
-                            <option value="Network Solutions">
-                            <option value="Software Solutions">
-                        </datalist>
-
+                        <input type="number" class="form-control" placeholder="Mobile" name="mobile">
                     </div>
                     <div class="form-group">
-                        <textarea name="" id="" cols="30" rows="3" class="form-control"
-                            placeholder="Description"></textarea>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" class="form-control"/>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" cols="30" rows="3" class="form-control"
+                            placeholder="Message"></textarea>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="form-control submit px-3">Send A Message</button>

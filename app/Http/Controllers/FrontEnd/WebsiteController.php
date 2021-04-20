@@ -4,7 +4,7 @@ namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Controllers\Controller;
 use App\Models\Operations\ContactOp;
-use App\Models\Operations\SolutionOp;
+use App\Models\Operations\SettingOp;
 
 class WebsiteController extends Controller
 {
@@ -41,8 +41,7 @@ class WebsiteController extends Controller
 
     public function contact()
     {
-        $solutions = SolutionOp::_fetchAll();
-        return view('front-end.contact', compact('solutions'));
+        return view('front-end.contact');
     }
 
     public function storeContacts()

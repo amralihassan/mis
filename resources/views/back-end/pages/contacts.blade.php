@@ -16,8 +16,8 @@
                                 <th>Full Name</th>
                                 <th>Mobile</th>
                                 <th>Email</th>
-                                <th>Solution</th>
-                                <th>Notes</th>
+                                <th>subject</th>
+                                <th>Message</th>
                                 <th>Created At</th>
                                 <th>Action</th>
                             </tr>
@@ -25,11 +25,11 @@
                         @foreach ($contacts as $index => $contact)
                             <tr>
                                 <td>{{ ++$index }}</td>
-                                <td><span class="font-weight-bold">{{ $contact->first_name }}</span> {{ $contact->last_name }}</td>
+                                <td>{{ $contact->full_name }}</td>
                                 <td>{{ $contact->mobile }}</td>
-                                <td>{{ $contact->email }} <br> {{ $contact->country }}</td>
-                                <td>{{ $contact->solutions->solution_name }}</td>
-                                <td>{{ $contact->notes }}</td>
+                                <td>{{ $contact->email }}</td>
+                                <td>{{ $contact->subject }}</td>
+                                <td>{{ $contact->message }}</td>
                                 <td>{{ $contact->created_at }}</td>
                                 <td>
                                     <form action="{{ route('contacts.destroy', $contact->id) }}" method="post" id="deleteForm">

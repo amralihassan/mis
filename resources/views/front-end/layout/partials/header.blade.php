@@ -38,19 +38,19 @@
                             <div class="col-md-2 d-flex justify-content-md-end">
                                 <div class="social-media">
                                     <p class="mb-0 d-flex text-info">
-                                        <a href="https://www.facebook.com/Multi-Information-Systems-115024650315294"
+                                        <a href="{{app('settings')->facebook}}"
                                             target="blank"
                                             class="d-flex align-items-center justify-content-center"><span
                                                 class="fa fa-facebook "><i class="sr-only ">Facebook</i></span></a>
 
-                                        <a href="#"
+                                        <a href="{{app('settings')->linked_in}}"
                                             class="d-flex align-items-center text-info justify-content-center"><span
                                                 class="fa "><i class="fab fa-linkedin "></i></span></a>
 
-                                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                                        <a href="{{app('settings')->instagram}}" class="d-flex align-items-center justify-content-center"><span
                                                 class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
 
-                                        <a href="#" class="d-flex align-items-center justify-content-center"><span
+                                        <a href="{{app('settings')->youtube}}" class="d-flex align-items-center justify-content-center"><span
                                                 class="fa "><i class="fab fa-youtube"></i></span></a>
                                     </p>
                                 </div>

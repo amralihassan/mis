@@ -13,9 +13,7 @@ class ContactOp extends Contact
 
     public static function _store()
     {
-        Contact::firstOrCreate(request()->only([
-            'first_name', 'last_name', 'email', 'mobile', 'solution_id', 'country', 'notes',
-        ]));
+        Contact::firstOrCreate(request()->only(['full_name', 'email', 'mobile',  'subject', 'message']));
         return true;
     }
 
