@@ -6,38 +6,24 @@
     <!-- start slide show ....................................... -->
     <div class="">
         <div class="home-slider owl-carousel">
-            <div class="slider-item " style="background-image:url({{asset('site/images/data_center-server-technology-748x421.jpg')}});">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row no-gutters slider-text align-items-center justify-content-center">
-                        <div class="col-md-8 ftco-animate">
-                            <div class="text w-100 text-center">
+            @foreach ($carousels as $carousel)
+                <div class="slider-item " style="background-image:url({{asset('storage/carousels/'.$carousel->slide_image)}});">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text align-items-center justify-content-center">
+                            <div class="col-md-8 ftco-animate">
+                                <div class="text w-100 text-center">
 
-                                <h1 class="mb-4">the best IT Solutions support
-                                </h1>
-                                <p><a href="#end" class="btn btn-white">Connect with us</a></p>
+                                    <h1 class="mb-4">{!!$carousel->title!!}
+                                    </h1>
+                                    <p>{!!$carousel->paragraph!!}</p>
+                                    <p><a href="#end" class="btn btn-white">Connect with us</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="slider-item "
-                style="background-image:url({{asset('site/images/Server-Setup-Houston-TX-Houston-PC-Services1.jpg')}});">
-                <div class="overlay"></div>
-                <div class="container">
-                    <div class="row no-gutters slider-text align-items-center justify-content-center">
-                        <div class="col-md-8 ftco-animate">
-                            <div class="text w-100 text-center">
-
-                                <h1 class="mb-4">We Help You Businesses Innovate and Grow</h1>
-                                <p><a href="#end" class="btn btn-white">Connect with us</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            @endforeach
 
         </div>
     </div>

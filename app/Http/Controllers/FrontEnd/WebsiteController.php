@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\FrontEnd;
 
 use App\Http\Controllers\Controller;
+use App\Models\Operations\CarouselOp;
 use App\Models\Operations\ContactOp;
-use App\Models\Operations\SettingOp;
 
 class WebsiteController extends Controller
 {
     public function homepage()
     {
-        return view('front-end.home');
+        $carousels = CarouselOp::_fetchAll();
+        return view('front-end.home', compact('carousels'));
     }
 
     public function about()
