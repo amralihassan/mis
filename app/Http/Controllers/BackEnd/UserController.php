@@ -23,9 +23,9 @@ class UserController extends Controller
      */
     public function index()
     {
-
         $users = UserOp::_fetchAll();
-        return view('back-end.users.index', compact('users'));
+        $roles = RoleOp::_fetchAll();
+        return view('back-end.users.index', compact('users', 'roles'));
     }
 
     /**
@@ -96,6 +96,18 @@ class UserController extends Controller
             return redirect()->route('users.index');
         }
 
+    }
+
+    public function updatePassword()
+    {
+        return view('back-end.update-password');
+    }
+
+    public function savePassword()
+    {
+        UserOp::updatePassword();
+        toastr()->success('Updated password successfully');
+        return redirect()->route('dashboard');
     }
 
 }

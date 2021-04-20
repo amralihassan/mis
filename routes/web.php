@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BackEnd\UserController;
 use App\Models\Operations\SettingOp;
 use Illuminate\Support\Facades\Route;
 
@@ -46,6 +47,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'BackE
     // SETTING
     Route::get('/settings', 'UtilityController@settings')->name('settings');
     Route::post('/general-settings', 'UtilityController@updateSettings')->name('update.settings');
+
+    //UPDATE PASSWORD
+    Route::get('update/password','UserController@updatePassword')->name('update-password');
+    Route::post('update/password/save','UserController@savePassword')->name('save-password');
 
     // WEBSITE
     require 'backend.php';

@@ -25,8 +25,7 @@ class UserOp extends User
             'password' => $request->password,
         ]));
         self::updateImage($request, $user);
-
-        $user->attachRoles($request->role_id);
+        $user->attachRoles($request->roles);
         return true;
     }
 
@@ -40,9 +39,8 @@ class UserOp extends User
         ]);
         self::updateImage($request, $user);
 
-        if(!empty($request->role_id))
-        {
-            $user->syncRoles($request->role_id);
+        if (!empty($request->roles)) {
+            $user->syncRoles($request->roles);
         }
         return true;
     }
@@ -73,6 +71,11 @@ class UserOp extends User
     public static function _count()
     {
         return User::count();
+    }
+
+    public static function updatePassword()
+    {
+        return User::where('id', auth()->user()->id)->update(['password' =>bcrypt(request('password')) ]);
     }
 
 }

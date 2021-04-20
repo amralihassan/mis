@@ -40,6 +40,7 @@
 
                 <div class="dropdown-menu dropdown-menu-right">
                     <!-- item-->
+                    <a class="dropdown-item" href="{{route('update-password')}}"><i class="fa fa-lock align-middle mr-1"></i> Change Password</a>
                     <a class="dropdown-item" href="{{route('profile')}}"><i class="ri-user-line align-middle mr-1"></i> Profile</a>
                     <a class="dropdown-item text-danger" href="{{route('logout')}}"><i class="ri-shut-down-line align-middle mr-1 text-danger"></i> Logout</a>
                 </div>
