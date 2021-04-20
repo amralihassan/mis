@@ -12,12 +12,12 @@
                         <ul class="ftco-footer-social p-0">
 
                             <li class="ftco-animate"><a
-                                    href="https://www.facebook.com/Multi-Information-Systems-115024650315294"
+                                    href="{{app('settings')->facebook}}""
                                     target="blank" data-toggle="tooltip" data-placement="top" title="Facebook"><span
                                         class="fa fa-facebook"></span></a></li>
-                            <li class="ftco-animate"><a href="#" target="blank" data-toggle="tooltip"
+                            <li class="ftco-animate"><a href="{{app('settings')->linked_in}}"" target="blank" data-toggle="tooltip"
                                     data-placement="top" title="linkedin"><span class="fa fa-linkedin"></span></a></li>
-                            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top"
+                            <li class="ftco-animate"><a href="{{app('settings')->instagram}}"" data-toggle="tooltip" data-placement="top"
                                     title="Instagram"><span class="fa fa-instagram"></span></a></li>
                         </ul>
                     </div>

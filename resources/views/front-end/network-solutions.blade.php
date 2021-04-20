@@ -25,48 +25,48 @@
             <div class="row d-flex mt-3">
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -infra.html" class="block-20 rounded"
+                        <a href="{{route('infra')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/server.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -infra.html">Network infrastructure
+                                <div><a href="{{route('infra')}}">Network infrastructure
                                     </a>
                                 </div>
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -infra.html"> MIS helps you adopt the most suitable IT
+                            <h3 class="heading"><a href="{{route('infra')}}"> MIS helps you adopt the most suitable IT
                                     solutions for your busines</a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate ">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -smart.html" class="block-20 rounded"
+                        <a href="{{route('smart')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/hikvision-smart-solution-2-0-cctv-software.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -smart.html">Smart Surveillance
+                                <div><a href="{{route('smart')}}">Smart Surveillance
                                     </a></div>
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -smart.html">Mis provides analogue, IP and hybrid CCTV
+                            <h3 class="heading"><a href="{{route('smart')}}">Mis provides analogue, IP and hybrid CCTV
                                     systems that are cost-effective.</a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -access.html" class="block-20 rounded"
+                        <a href="{{route('access')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/Accesscard_900.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -access.html">Access Control </a></div>
+                                <div><a href="{{route('access')}}">Access Control </a></div>
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -access.html">access control is the selective
+                            <h3 class="heading"><a href="{{route('access')}}">access control is the selective
                                     restriction of access to a place while access management describes the process. </a>
                             </h3>
                         </div>
@@ -75,48 +75,48 @@
 
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -time.html" class="block-20 rounded"
+                        <a href="{{route('time')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/dedect.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -time.html"> Time Attendance &amp; Face Detection </a></div>
+                                <div><a href="{{route('time')}}"> Time Attendance &amp; Face Detection </a></div>
 
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -time.html"> Centralized working hours control several
+                            <h3 class="heading"><a href="{{route('time')}}"> Centralized working hours control several
                                     locations Working hours control of each individual employee </a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -voip.html" class="block-20 rounded"
+                        <a href="{{route('voip')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/voip.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -voip.html">VOIP Solutions
+                                <div><a href="{{route('voip')}}">VOIP Solutions
                                     </a></div>
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -voip.html"> providing the best quality of service to
+                            <h3 class="heading"><a href="{{route('voip')}}"> providing the best quality of service to
                                     our clients, and use high end brands for projects.</a></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 d-flex ftco-animate">
                     <div class="blog-entry align-self-stretch">
-                        <a href="blog-single -fire.html" class="block-20 rounded"
+                        <a href="{{route('fire')}}" class="block-20 rounded"
                             style="background-image: url('{{asset("site/images/alarm.jpg")}}');">
                         </a>
                         <div class="text p-4">
                             <div class="meta mb-2">
-                                <div><a href="blog-single -fire.html">Fire Alarm System
+                                <div><a href="{{route('fire')}}">Fire Alarm System
                                     </a></div>
 
                             </div>
-                            <h3 class="heading"><a href="blog-single -fire.html">Fire Alarm System is designed to alert us
+                            <h3 class="heading"><a href="{{route('fire')}}">Fire Alarm System is designed to alert us
                                     to an emergency so that we can take action to protect ourselves</a></h3>
                         </div>
                     </div>

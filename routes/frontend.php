@@ -11,4 +11,17 @@ Route::group(['namespace' => 'FrontEnd'], function () {
     Route::get('/contact', 'WebsiteController@contact')->name('contact');
     Route::post('/contact/store', 'WebsiteController@storeContacts')->name('contacts.store');
 
+    Route::get('/access', 'WebsiteController@access')->name('access');
+    Route::get('/client', 'WebsiteController@client')->name('client');
+    Route::get('/elearn', 'WebsiteController@elearn')->name('elearn');
+    Route::get('/ems', 'WebsiteController@ems')->name('ems');
+    Route::get('/fire', 'WebsiteController@fire')->name('fire');
+    Route::get('/fms', 'WebsiteController@fms')->name('fms');
+    Route::get('/infra', 'WebsiteController@infra')->name('infra');
+    Route::get('/mms', 'WebsiteController@mms')->name('mms');
+    Route::get('/pms', 'WebsiteController@pms')->name('pms');
+    Route::get('/smart', 'WebsiteController@smart')->name('smart');
+    Route::get('/time', 'WebsiteController@time')->name('time');
+    Route::get('/voip', 'WebsiteController@voip')->name('voip');
+
 });

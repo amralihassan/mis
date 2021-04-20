@@ -50,4 +50,64 @@ class WebsiteController extends Controller
         return redirect()->back();
     }
 
+    public function access()
+    {
+        return view('front-end.access');
+    }
+
+    public function client()
+    {
+        return view('front-end.client');
+    }
+
+    public function elearn()
+    {
+        return view('front-end.elearn');
+    }
+
+    public function ems()
+    {
+        return view('front-end.ems');
+    }
+
+    public function fire()
+    {
+        return view('front-end.fire');
+    }
+
+    public function fms()
+    {
+        return view('front-end.fms');
+    }
+
+    public function infra()
+    {
+        return view('front-end.infra');
+    }
+
+    public function mms()
+    {
+        return view('front-end.mms');
+    }
+
+    public function pms()
+    {
+        return view('front-end.pms');
+    }
+
+    public function smart()
+    {
+        return view('front-end.smart');
+    }
+
+    public function time()
+    {
+        return view('front-end.time');
+    }
+
+    public function voip()
+    {
+        return view('front-end.voip');
+    }
+
 }
